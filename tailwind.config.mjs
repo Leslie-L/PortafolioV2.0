@@ -2,7 +2,18 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				transparent: 'transparent',
+				current: 'currentColor',
+				primary: '#190019',
+				principalCard: '#270E42',
+				buttons: '#522B5B',
+				proyectCard: '#DFB6B2',
+				black: '#190019',
+				white: '#FFFFFF',
+			  },
+		},
 	},
 	plugins: [],
 }
