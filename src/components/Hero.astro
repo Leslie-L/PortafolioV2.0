@@ -1,10 +1,32 @@
-<article>
+---
+import LinkedIn from './icons/linkedin.astro'
+import Github from './icons/github.astro'
+---
+---
+<article class="m-4 p-4 max-w-screen-md rounded-lg bg-principalCard flex flex-col justify-center items-center md:flex-row">
     <div>
         <picture>
-            <img src="" alt="">
+            <img src="./avatarProgramming.jpg" alt="My photo " class="w-32 h-44 rounded-lg">
         </picture>
-        <div>
-            
+        <div class="w-32 h-10 my-4 flex justify-center">
+            <a href="">
+                <LinkedIn class="w-8 h-8 text-proyectCard hover:w-9 hover:h-9"/>
+            </a>
+            <a href="" class="px-2">
+                <Github class="w-8 h-8 text-proyectCard hover:w-9 hover:h-9" />
+            </a>
         </div>
+    </div>
+    <div class="text-proyectCard md:ml-8">
+        <h1 class="text-2xl font-bold">Leslie Centeno</h1>
+        <p>
+            Passionate Systems Engineer with a Master's in Operations Research. I specialize in the art of problem-solving and fueled by challenging projects.
+        </p>
+        <p class="hidden md:block">
+            I am genuinely excited about contributing my skills and enthusiasm to dynamic professional settings. Moreover, my overarching goal is to craft applications that are not only more accessible but also enhance the overall user experience. 
+        </p>
+        <p class="hidden md:block">
+            I invite you to explore more about my work!
+        </p>
     </div>
 </article>
