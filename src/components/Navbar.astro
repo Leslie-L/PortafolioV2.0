@@ -1,0 +1,49 @@
+---
+import Back from './icons/back.astro';
+import Next from './icons/nextArrow.astro';
+import ProjectIcon from './icons/projects.astro'
+import SkillsIcon from './icons/skills.astro';
+import Email from './icons/email.astro'
+import Home from './icons/main.astro'
+
+interface Props {
+    before:string;
+    after:string;
+    actual:string;
+}
+const {before,after,actual} =Astro.props
+---
+<nav class="max-w-screen-md w-full h-10 ">
+    <ul class="w-full h-12 p-4 text-xl bg-buttons text-proyectCard flex justify-between items-center rounded-lg">
+        <li>
+            <a href=`/${before}` 
+                class="flex items-center hover:text-principalCard"
+            ><Back/><span class="hidden md:block">Back</span></a>
+        </li>
+        <li class="flex items-center">{actual}{
+            actual=='projects' &&
+                <ProjectIcon />
+            }{
+            actual=='skills' &&
+                <SkillsIcon />
+            }
+            {
+            actual=='email' &&
+             <Email/>
+            }{
+            actual=='index' &&
+             <Home/> 
+            }
+        </li>
+        <li>
+            <a href=`/${after}` class="flex items-center hover:text-principalCard">
+            <span class="hidden md:block">Next</span> <Next class="h-8 w-8 "/></a>
+        </li>
+    </ul>
+</nav>
+
+<style>
+    li{
+        font-family:'Bebas Neue',system-ui, sans-serif ;
+    }
+</style>
