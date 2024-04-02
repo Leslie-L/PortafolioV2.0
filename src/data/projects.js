@@ -60,7 +60,7 @@ export const projects = [
         'img':'./imgs/twitter.webp',
         'description':'This project involves replicating the Twitter login interface, with the primary goal of recreating all the webpage\'s styles using only HTML and CSS.',
         'github':'https://github.com/Leslie-L/TwitterClonLogIn',
-        'technoligies':['HTML','CSS','JavaScript'],
+        'technoligies':['HTML','CSS'],
         'link':'https://leslie-l.github.io/TwitterClonLogIn/'
     }
 ]
