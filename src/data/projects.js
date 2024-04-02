@@ -2,7 +2,7 @@ export const projects = [
     {
         'title':'Future World',
         'img':'./imgs/futureworld.webp',
-        'description':'Fake e-commerce where users can purchase futuristic items.',
+        'description':'Fictitious store of futuristic products offering a complete shopping experience, registration, order tracking, and assistance through a chatbot.',
         'github':'https://github.com/Leslie-L/next-14',
         'technoligies':['Next.js','React','Typescript','Zustand','CSS','Supabase'],
         'link':'https://next-14-adxc.vercel.app'
@@ -10,7 +10,7 @@ export const projects = [
     {
         'title':'GoodBooks',
         'img':'./imgs/goodbooks.webp',
-        'description':'App that allows users to view a list of books and save their favorite books.',
+        'description':'A user-friendly web app for managing your reading: Browse available books, curate your reading list, and seamlessly sync your selections across devices without backend dependencies.',
         'github':'https://github.com/Leslie-L/pruebas-tecnicas/tree/main/pruebas/01-reading-list/Leslie-L/goodbooks',
         'technoligies':['HTML','React','Zustand','Taildwind','Vite.js'],
         'link':'https://adorable-piroshki-cc3799.netlify.app/'
