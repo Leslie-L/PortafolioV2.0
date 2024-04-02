@@ -14,7 +14,7 @@ const { href, title, body, github, technologies, imgLink } = Astro.props;
 
 <li class="w-72 h-[528px] rounded-md bg-proyectCard my-4 p-4 flex flex-col md:flex-row md:gap-2 md:w-[750px] md:h-[265px] md:odd:flex-row-reverse">
   
-  <div class="w-64 md:w-[300px]">
+  <div class="w-64 md:w-[350px]">
 		<img src={imgLink} alt={title} class="h-52 rounded-md" />
     <a class="w-full h-8 bg-principalCard text-white rounded-md relative bottom-2 block text-center text-lg hover:bg-white hover:text-principalCard" 
     href={href}>Visit</a>
@@ -48,7 +48,7 @@ const { href, title, body, github, technologies, imgLink } = Astro.props;
 <style>
   @media (min-width: 768px){
     img{
-      width:300px;
+      width:350px;
       max-width: none;
       
     }
