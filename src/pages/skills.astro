@@ -7,6 +7,8 @@ import { state } from "../data/state";
 import {backend} from '../data/backend'
 import { data } from "../data/data";
 import 	{testing} from "../data/testing";
+import { database } from "../data/database";
+import { tools} from "../data/tools";
 import HTML from "../components/icons/html.astro"
 import CSS from "../components/icons/css.astro"
 import Boostrap from "../components/icons/boostrap.astro"
@@ -31,6 +33,14 @@ import Puppeteer from "../components/icons/puppeteer.astro"
 import Cypress from "../components/icons/cypress.astro"
 import Postman from "../components/icons/postman.astro"
 import Selenium from "../components/icons/selenium.astro"
+import Postgres from "../components/icons/postgres.astro"
+import Firebase from "../components/icons/firebase.astro"
+import SQL from "../components/icons/sql.astro"
+import Git from "../components/icons/git.astro"
+import Github from "../components/icons/github.astro"
+import Figma from "../components/icons/figma.astro"
+
+
 
 const skills:Record<string, any> = {
 	HTML,
@@ -56,7 +66,13 @@ const skills:Record<string, any> = {
 	Puppeteer,
 	Cypress,
 	Postman,
-	Selenium
+	Selenium,
+	Postgres,
+	Firebase,
+	SQL,
+	Git,
+	Github,
+	Figma
 }
 	
 
@@ -68,7 +84,7 @@ const skills:Record<string, any> = {
 		<section class="max-w-screen-md my-4 grid md:grid-cols-2 justify-center gap-2">
 			<article class="w-full p-3 bg-proyectCard rounded-md" >
 				<h3 class="text-lg">Frontend</h3>
-				<ul class="grid grid-cols-4">
+				<ul class="grid grid-cols-4 gap-2">
 					{
 						frontend.map(item=>{
 							const Icon = skills[item]
@@ -82,7 +98,7 @@ const skills:Record<string, any> = {
 					}
 				</ul>
 				<h3 class="mt-4 text-lg">State Managment</h3>
-				<ul  class="grid grid-cols-4">
+				<ul  class="grid grid-cols-4 gap-2">
 					{
 						state.map(item=>{
 							const Icon = skills[item]
@@ -98,7 +114,7 @@ const skills:Record<string, any> = {
 			</article>
 			<article class="w-full p-3 bg-proyectCard rounded-md" >
 				<h3 class="text-lg">Backend</h3>
-				<ul class="grid grid-cols-4">
+				<ul class="grid grid-cols-4 gap-2">
 					{
 						backend.map(item=>{
 							const Icon = skills[item]
@@ -112,7 +128,7 @@ const skills:Record<string, any> = {
 					}
 				</ul>
 				<h3 class="mt-4 text-lg">Data Science</h3>
-				<ul  class="grid grid-cols-4 items-center">
+				<ul  class="grid grid-cols-4 items-center gap-2">
 					{
 						data.map(item=>{
 							const Icon = skills[item]
@@ -128,7 +144,7 @@ const skills:Record<string, any> = {
 			</article>
 			<article class="w-full p-3 bg-proyectCard rounded-md" >
 				<h3 class="text-lg">Testing</h3>
-				<ul class="grid grid-cols-4">
+				<ul class="grid grid-cols-4 ">
 					{
 						testing.map(item=>{
 							const Icon = skills[item]
@@ -143,7 +159,36 @@ const skills:Record<string, any> = {
 				</ul>
 				
 			</article>
-			
+			<article class="w-full p-3 bg-proyectCard rounded-md" >
+				<h3 class="text-lg">Database</h3>
+				<ul class="grid grid-cols-4 gap-2">
+					{
+						database.map(item=>{
+							const Icon = skills[item]
+							return(
+							<li class=" flex flex-col justify-center items-center">
+								{Icon &&<Icon class="w-8 h-8"/>}
+								<span class="text-black text-md">{item}</span>
+							</li>
+							)
+						})
+					}
+				</ul>
+				<h3 class="mt-4 text-lg">Another Tools</h3>
+				<ul  class="grid grid-cols-4 gap-2">
+					{
+						tools.map(item=>{
+							const Icon = skills[item]
+							return(
+							<li class=" flex flex-col justify-center items-center">
+								{Icon &&<Icon class="w-8 h-8"/>}
+								<span class="text-black text-md">{item}</span>
+							</li>
+							)
+						})
+					}
+				</ul>
+			</article>
 		</section>
 	</main>
 </Layout>
