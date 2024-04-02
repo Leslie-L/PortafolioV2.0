@@ -1,43 +1,57 @@
 ---
-import Github from './icons/github.astro';
+import Github from "./icons/github.astro";
 interface Props {
-	title: string;
-	body: string;
-	github:string;
-	href: string;
-	imgLink:string;
-	technologies:string[];
+  title: string;
+  body: string;
+  github: string;
+  href: string;
+  imgLink: string;
+  technologies: string[];
 }
 
 const { href, title, body, github, technologies, imgLink } = Astro.props;
 ---
 
-<li class="w-72 h-[528px] p-4 rounded-md bg-proyectCard flex flex-col justify-center">
-	<a class="w-72 h-[528px]" href={href}>
-		<picture>
-			<img src={imgLink} alt={title} class="w-62 h-52 rounded-md">
-		</picture>
-		<div class="flex flex-col justify-center">
-			<div class="flex justify-between items-center">
-				<h2 class="font-normal text-xl">{title}</h2>
-				<a class="text-md text-principalCard hover:underline" href={github}> Github link <Github/> </a>
-			</div>
-			<p >
-				{body}
-			</p>
-			<div>
-				<h4>Technologies</h4>
-				<p class="flex gap-1">
-					{
-						technologies.map(item=>
-						<span class="p-1 text-white text-md bg-principalCard">
-							{item}
-						</span>
-						)
-					}
-				</p>
-			</div>
-		</div>
-	</a>
-</li>
+<li class="w-72 h-[528px] rounded-md bg-proyectCard my-4 p-4 flex flex-col md:flex-row md:gap-2 md:w-[750px] md:h-[265px] md:odd:flex-row-reverse">
+  
+  <div class="w-64 md:w-[300px]">
+		<img src={imgLink} alt={title} class="h-52 rounded-md" />
+    <a class="w-full h-8 bg-principalCard text-white rounded-md relative bottom-2 block text-center text-lg hover:bg-white hover:text-principalCard" 
+    href={href}>Visit</a>
+	</div>
 
+  <div class="w-auto flex flex-col grow justify-center my-2">
+      <div class="flex justify-between items-center">
+        <h2 class="text-xl font-semibold">{title}</h2>
+        <a class="text-lg flex items-center  text-principalCard hover:underline" href={github}>
+          Github link <Github class="w-5 h-5" />
+        </a>
+      </div>
+      <p class="grow">
+        {body}
+      </p>
+      <div class="w-full">
+        <h4 class="font-semibold">Technologies</h4>
+        <div class="flex flex-wrap gap-1">
+          {
+            technologies.map((item) => (
+              <span class="p-1 text-white text-md rounded-md bg-principalCard">
+                {item}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  
+</li>
+<style>
+  @media (min-width: 768px){
+    img{
+      width:300px;
+      max-width: none;
+      
+    }
+  }
+  
+</style>

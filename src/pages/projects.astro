@@ -1,11 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro'
-
+import { projects } from '../data/projects';
+import Card from '../components/Card.astro';
 ---
 
 <Layout title="Projects">
-	<main class="min-h-screen w-full flex justify-center">
+	<main class="min-h-screen w-full flex flex-col  items-center">
 		<Navbar after='skills' before='' actual='projects'/>
+		<ul class="my-4">
+			{
+				projects.map(item=>{
+					return <Card 
+					href={item.link} 
+					title={item.title} 
+					body={item.description}
+					github={item.github}
+					technologies={item.technoligies}
+					imgLink={item.img}
+					/>
+				})
+			}
+		</ul>
 	</main>
 </Layout>

@@ -1,7 +1,7 @@
 export const projects = [
     {
         'title':'Future World',
-        'img':'',
+        'img':'./imgs/futureworld.webp',
         'description':'Fake e-commerce where users can purchase futuristic items.',
         'github':'https://github.com/Leslie-L/next-14',
         'technoligies':['Next.js','React','Typescript','Zustand','CSS','Supabase'],
@@ -9,7 +9,7 @@ export const projects = [
     },
     {
         'title':'GoodBooks',
-        'img':'',
+        'img':'./imgs/goodbooks.webp',
         'description':'App that allows users to view a list of books and save their favorite books.',
         'github':'https://github.com/Leslie-L/pruebas-tecnicas/tree/main/pruebas/01-reading-list/Leslie-L/goodbooks',
         'technoligies':['HTML','React','Zustand','Taildwind','Vite.js'],
@@ -17,7 +17,7 @@ export const projects = [
     },
     {
         'title':'TIC TAC TOE',
-        'img':'',
+        'img':'./imgs/tictactoe.webp',
         'description':'Tic tac toe game. You can play versus a player or versus the computer.',
         'github':'https://github.com/Leslie-L/TicTacToe',
         'technoligies':['HTML','React','Taildwind','Vite.js'],
@@ -25,7 +25,7 @@ export const projects = [
     },
     {
         'title':'Pokedex',
-        'img':'',
+        'img':'./imgs/pokemon.webp',
         'description':'App where you can see all the Pokemons.',
         'github':'https://github.com/Leslie-L/Pokedex',
         'technoligies':['HTML','React','Taildwind','Vite.js','Redux'],
@@ -33,7 +33,7 @@ export const projects = [
     },
     {
         'title':'FakeShop',
-        'img':'',
+        'img':'./imgs/fakeshop.webp',
         'description':'Application that simulates a virtual store',
         'github':'https://github.com/Leslie-L/E-commerceV1/tree/main/E-CommerceV1',
         'technoligies':['HTML','React','Taildwind','Vite.js'],
@@ -41,7 +41,7 @@ export const projects = [
     },
     {
         'title':'Rick And Morty Wiki',
-        'img':'',
+        'img':'./imgs/rickandmorty.webp',
         'description':'SAP that shows all the charactes of Rick and Morty serie. The target of this project is practic to create SPA.',
         'github':'https://github.com/Leslie-L/Rick-MortyApp',
         'technoligies':['HTML','CSS','TypeScript', 'Vite.js'],
@@ -49,7 +49,7 @@ export const projects = [
     },
     {
         'title':'Where\'s in the Wold?',
-        'img':'',
+        'img':'./imgs/flags.webp',
         'description':'Application where you can see all the countries in the world and their details.',
         'github':'https://github.com/Leslie-L/Projects/tree/main/Advance/rest-countries-api-with-color-theme-switcher-master',
         'technoligies':['HTML','CSS','JavaScript'],
@@ -57,7 +57,7 @@ export const projects = [
     },
     {
         'title':'Twitter Login Clone',
-        'img':'',
+        'img':'./imgs/twitter.webp',
         'description':'This project involves replicating the Twitter login interface, with the primary goal of recreating all the webpage\'s styles using only HTML and CSS.',
         'github':'https://github.com/Leslie-L/TwitterClonLogIn',
         'technoligies':['HTML','CSS','JavaScript'],
