@@ -1,11 +1,71 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
+
+import {frontend} from "../data/frontend.js"
+import { state } from "../data/state";
+import HTML from "../components/icons/html.astro"
+import CSS from "../components/icons/css.astro"
+import Boostrap from "../components/icons/boostrap.astro"
+import Javascript from "../components/icons/javascript.astro"
+import React from "../components/icons/react.astro"
+import Tailwind from "../components/icons/tailwind.astro"
+import Next from "../components/icons/next.astro"
+import Typescript from "../components/icons/typescript.astro"
+import Redux from "../components/icons/redux.astro"
+import Zustand from "../components/icons/zustand.astro"
+
+const skills:Record<string, any> = {
+	HTML,
+	CSS,
+	Boostrap,
+	Javascript,
+	React,
+	Tailwind,
+	Next,
+	Typescript,
+	Redux,
+	Zustand
+}
+	
+
 ---
 
 <Layout title="Skills">
     <main class="min-h-screen w-full flex flex-col  items-center">
 		<Navbar after='contact' before='projects' actual='skills'/>
-		
+		<section class="max-w-screen-md my-4 grid md:grid-cols-2 justify-center gap-2">
+			<article class="w-full p-3 bg-proyectCard rounded-md" >
+				<h3 class="text-lg">Frontend</h3>
+				<ul class="grid grid-cols-4">
+					{
+						frontend.map(item=>{
+							const Icon = skills[item]
+							return(
+							<li class=" flex flex-col justify-center items-center">
+								{Icon &&<Icon class="w-8 h-8"/>}
+								<span class="text-black text-md">{item}</span>
+							</li>
+							)
+						})
+					}
+				</ul>
+				<h3 class="mt-4 text-lg">State Managment</h3>
+				<ul  class="grid grid-cols-4">
+					{
+						state.map(item=>{
+							const Icon = skills[item]
+							return(
+							<li class=" flex flex-col justify-center items-center">
+								{Icon &&<Icon class="w-8 h-8"/>}
+								<span class="text-black text-md">{item}</span>
+							</li>
+							)
+						})
+					}
+				</ul>
+			</article>
+			
+		</section>
 	</main>
 </Layout>
