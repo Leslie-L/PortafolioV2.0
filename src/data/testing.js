@@ -6,28 +6,11 @@ import Postman from "../components/icons/postman.astro"
 import Selenium from "../components/icons/selenium.astro"
 
 export const testing = [
-    {
-        name:'Jest',
-        icon: Jest
-    },
-    {
-        name:'Playwright',
-        icon: Playwright
-    },
-    {
-        name:'Puppeteer',
-        icon: Puppeteer
-    },
-    {
-        name:'Cypress',
-        icon: Cypress
-    },
-    {
-        name:'Postman',
-        icon: Postman
-    },
-    {
-        name:'Selenium',
-        icon: Selenium
-    }
+   'Jest',
+    'Playwright',
+    'Puppeteer',
+    'Cypress',
+    'Postman',
+    'Selenium',
+      
 ]

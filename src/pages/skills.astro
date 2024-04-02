@@ -6,6 +6,7 @@ import {frontend} from "../data/frontend.js"
 import { state } from "../data/state";
 import {backend} from '../data/backend'
 import { data } from "../data/data";
+import 	{testing} from "../data/testing";
 import HTML from "../components/icons/html.astro"
 import CSS from "../components/icons/css.astro"
 import Boostrap from "../components/icons/boostrap.astro"
@@ -24,6 +25,12 @@ import R from "../components/icons/r.astro"
 import Pandas from "../components/icons/pandas.astro"
 import Numpy from "../components/icons/numpy.astro"
 import Scikitlearn from "../components/icons/scikitlearn.astro"
+import Jest from "../components/icons/jest.astro"
+import Playwright from "../components/icons/playwright.astro"
+import Puppeteer from "../components/icons/puppeteer.astro"
+import Cypress from "../components/icons/cypress.astro"
+import Postman from "../components/icons/postman.astro"
+import Selenium from "../components/icons/selenium.astro"
 
 const skills:Record<string, any> = {
 	HTML,
@@ -43,7 +50,13 @@ const skills:Record<string, any> = {
 	R,
 	Pandas,
 	Numpy,
-	Scikitlearn
+	Scikitlearn,
+	Jest,
+	Playwright,
+	Puppeteer,
+	Cypress,
+	Postman,
+	Selenium
 }
 	
 
@@ -112,6 +125,23 @@ const skills:Record<string, any> = {
 						})
 					}
 				</ul>
+			</article>
+			<article class="w-full p-3 bg-proyectCard rounded-md" >
+				<h3 class="text-lg">Testing</h3>
+				<ul class="grid grid-cols-4">
+					{
+						testing.map(item=>{
+							const Icon = skills[item]
+							return(
+							<li class=" flex flex-col justify-center items-center">
+								{Icon &&<Icon class="w-8 h-8"/>}
+								<span class="text-black text-md">{item}</span>
+							</li>
+							)
+						})
+					}
+				</ul>
+				
 			</article>
 			
 		</section>
