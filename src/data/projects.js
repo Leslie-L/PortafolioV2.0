@@ -18,7 +18,7 @@ export const projects = [
     {
         'title':'TIC TAC TOE',
         'img':'./imgs/tictactoe.webp',
-        'description':'Tic tac toe game. You can play versus a player or versus the computer.',
+        'description':'Tic Tac Toe game. With a responsive design and interactive elements with single or multiplayer game modes.',
         'github':'https://github.com/Leslie-L/TicTacToe',
         'technoligies':['HTML','React','Taildwind','Vite.js'],
         'link':'https://clever-sable-45175b.netlify.app'
@@ -26,7 +26,7 @@ export const projects = [
     {
         'title':'Pokedex',
         'img':'./imgs/pokemon.webp',
-        'description':'App where you can see all the Pokemons.',
+        'description':' Displays all Pokémon with infinite scrolling. Search Pokémon by name and like your favorites, accessing detailed information on click.',
         'github':'https://github.com/Leslie-L/Pokedex',
         'technoligies':['HTML','React','Taildwind','Vite.js','Redux'],
         'link':'https://velvety-monstera-4607d4.netlify.app'
@@ -34,7 +34,7 @@ export const projects = [
     {
         'title':'FakeShop',
         'img':'./imgs/fakeshop.webp',
-        'description':'Application that simulates a virtual store',
+        'description':'Simulate online browsing and purchasing with a virtual store. Manage your cart, view order summaries, history, and explore product details.',
         'github':'https://github.com/Leslie-L/E-commerceV1/tree/main/E-CommerceV1',
         'technoligies':['HTML','React','Taildwind','Vite.js'],
         'link':'https://classy-llama-096c90.netlify.app/'
@@ -42,7 +42,7 @@ export const projects = [
     {
         'title':'Rick And Morty Wiki',
         'img':'./imgs/rickandmorty.webp',
-        'description':'SAP that shows all the charactes of Rick and Morty serie. The target of this project is practic to create SPA.',
+        'description':' An immersive and interactive platform dedicated to exploring the diverse characters from the beloved animated series, Rick and Morty.',
         'github':'https://github.com/Leslie-L/Rick-MortyApp',
         'technoligies':['HTML','CSS','TypeScript', 'Vite.js'],
         'link':'https://main--rickyandmortyprojectleslie.netlify.app/'
@@ -50,7 +50,7 @@ export const projects = [
     {
         'title':'Where\'s in the Wold?',
         'img':'./imgs/flags.webp',
-        'description':'Application where you can see all the countries in the world and their details.',
+        'description':'Explore countries worldwide, featuring comprehensive country lists, intuitive search, region filtering, detailed information display, and seamless navigation, all within a responsive design and customizable color scheme',
         'github':'https://github.com/Leslie-L/Projects/tree/main/Advance/rest-countries-api-with-color-theme-switcher-master',
         'technoligies':['HTML','CSS','JavaScript'],
         'link':'https://amazing-cobbler-b17f99.netlify.app'
