@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar.astro";
 
 import {frontend} from "../data/frontend.js"
 import { state } from "../data/state";
+import {backend} from '../data/backend'
+import { data } from "../data/data";
 import HTML from "../components/icons/html.astro"
 import CSS from "../components/icons/css.astro"
 import Boostrap from "../components/icons/boostrap.astro"
@@ -14,6 +16,14 @@ import Next from "../components/icons/next.astro"
 import Typescript from "../components/icons/typescript.astro"
 import Redux from "../components/icons/redux.astro"
 import Zustand from "../components/icons/zustand.astro"
+import Node from "../components/icons/node.astro"
+import Python from "../components/icons/python.astro"
+import PHP from "../components/icons/php.astro"
+import Java from "../components/icons/java.astro"
+import R from "../components/icons/r.astro"
+import Pandas from "../components/icons/pandas.astro"
+import Numpy from "../components/icons/numpy.astro"
+import Scikitlearn from "../components/icons/scikitlearn.astro"
 
 const skills:Record<string, any> = {
 	HTML,
@@ -25,7 +35,15 @@ const skills:Record<string, any> = {
 	Next,
 	Typescript,
 	Redux,
-	Zustand
+	Zustand,
+	Node,
+	Python,
+	PHP,
+	Java,
+	R,
+	Pandas,
+	Numpy,
+	Scikitlearn
 }
 	
 
@@ -54,6 +72,36 @@ const skills:Record<string, any> = {
 				<ul  class="grid grid-cols-4">
 					{
 						state.map(item=>{
+							const Icon = skills[item]
+							return(
+							<li class=" flex flex-col justify-center items-center">
+								{Icon &&<Icon class="w-8 h-8"/>}
+								<span class="text-black text-md">{item}</span>
+							</li>
+							)
+						})
+					}
+				</ul>
+			</article>
+			<article class="w-full p-3 bg-proyectCard rounded-md" >
+				<h3 class="text-lg">Backend</h3>
+				<ul class="grid grid-cols-4">
+					{
+						backend.map(item=>{
+							const Icon = skills[item]
+							return(
+							<li class=" flex flex-col justify-center items-center">
+								{Icon &&<Icon class="w-8 h-8"/>}
+								<span class="text-black text-md">{item}</span>
+							</li>
+							)
+						})
+					}
+				</ul>
+				<h3 class="mt-4 text-lg">Data Science</h3>
+				<ul  class="grid grid-cols-4 items-center">
+					{
+						data.map(item=>{
 							const Icon = skills[item]
 							return(
 							<li class=" flex flex-col justify-center items-center">
