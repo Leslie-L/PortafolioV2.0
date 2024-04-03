@@ -12,7 +12,8 @@ interface Props {
     actual:string;
 }
 const {before,after,actual} =Astro.props
-const textBefore = before ===""? 'Back' : before;
+const textBefore = before ===""? 'Home' : before;
+const textAfter = after ===""? 'Home' : after;
 ---
 <nav class="max-w-screen-md w-full h-10 ">
     <ul class="w-full h-12 p-4 text-xl bg-buttons text-proyectCard flex justify-between items-center rounded-lg">
@@ -23,22 +24,23 @@ const textBefore = before ===""? 'Back' : before;
         </li>
         <li class="flex items-center">{actual}{
             actual=='projects' &&
-                <ProjectIcon />
+                <ProjectIcon class="mx-2 h-8 w-8"/>
             }{
             actual=='skills' &&
-                <SkillsIcon class="mx-2" />
+                <SkillsIcon class="mx-2 h-8 w-8" />
             }
             {
-            actual=='email' &&
-             <Email/>
+            actual=='contact me' &&
+             <Email class="mx-2 h-8 w-8"/>
             }{
             actual=='index' &&
-             <Home/> 
+             <Home /> 
             }
         </li>
         <li>
             <a href=`/${after}` class="flex items-center hover:text-principalCard">
-            <span class="hidden md:block">{after}</span> <Next class="h-8 w-8 "/></a>
+            <span class="hidden md:block">{textAfter}</span> <Next class="h-8 w-8 "/>
+            </a>
         </li>
     </ul>
 </nav>
