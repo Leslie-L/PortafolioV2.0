@@ -11,10 +11,10 @@ if (Astro.request.method === "POST") {
   try {
     const data = await Astro.request.formData();
       const info:Content = {
-        name: data.get('name'),
-        subject:data.get('subject'),
-        email:data.get('mail'),
-        message:data.get('message'),
+        name: data.get('name')?.toString() ?? '',
+        subject:data.get('subject')?.toString() ?? '',
+        email:data.get('mail')?.toString() ?? '',
+        message:data.get('message')?.toString() ?? '',
       }
      SendMail(info);
      showModal=true;
