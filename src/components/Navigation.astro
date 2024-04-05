@@ -5,14 +5,16 @@ import IconContact from './icons/email.astro'
 ---
 <nav>
     <ul class=" m-4 max-w-screen-md flex flex-col text-proyectCard md:gap-2">
-        <div class="md:flex  md:gap-2">
-            <li class="w-full bg-buttons rounded-lg text-2xl hover:bg-proyectCard hover:text-buttons">
-                <a href="/projects" class="flex gap-2 justify-center items-center w-full h-10 md:h-28 my-2 md:my-0">Projects <IconProyect class="h-8 w-8"/> </a>
-            </li>
-            <li class="w-full bg-buttons rounded-lg text-2xl hover:bg-proyectCard hover:text-buttons">
-                <a href="/skills" class="flex gap-2 justify-center items-center w-full h-10 md:h-28 my-2 md:my-0">Skills <IconSkills class="h-8 w-8"/></a>
-            </li>
-        </div>
+        <li>
+            <ul class="md:flex  md:gap-2">
+                <li class="w-full bg-buttons rounded-lg text-2xl hover:bg-proyectCard hover:text-buttons">
+                    <a href="/projects" class="flex gap-2 justify-center items-center w-full h-10 md:h-28 my-2 md:my-0">Projects <IconProyect class="h-8 w-8"/> </a>
+                </li>
+                <li class="w-full bg-buttons rounded-lg text-2xl hover:bg-proyectCard hover:text-buttons">
+                    <a href="/skills" class="flex gap-2 justify-center items-center w-full h-10 md:h-28 my-2 md:my-0">Skills <IconSkills class="h-8 w-8"/></a>
+                </li>
+            </ul>
+        </li>
         <li class="flex-grow bg-buttons rounded-lg text-2xl hover:bg-proyectCard hover:text-buttons">
             <a href="/contact" class="flex gap-2 justify-center items-center  w-full h-10 md:h-28 ">Contact Me<IconContact class="h-8 w-8"/></a></li>
     </ul>
