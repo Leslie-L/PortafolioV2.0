@@ -8,6 +8,22 @@ export const projects = [
         'link':'https://next-14-adxc.vercel.app'
     },
     {
+        'title':'FakeShop',
+        'img':'./imgs/fakeshop.webp',
+        'description':'Simulate online browsing and purchasing with a virtual store. Manage your cart, view order summaries, history, and explore product details.',
+        'github':'https://github.com/Leslie-L/E-commerceV1/tree/main/E-CommerceV1',
+        'technoligies':['HTML','React','Taildwind','Vite.js'],
+        'link':'https://classy-llama-096c90.netlify.app/'
+    },
+    {
+        'title':'Pokedex',
+        'img':'./imgs/pokemon.webp',
+        'description':' Displays all Pokémon with infinite scrolling. Search Pokémon by name and like your favorites, accessing detailed information on click.',
+        'github':'https://github.com/Leslie-L/Pokedex',
+        'technoligies':['HTML','React','Taildwind','Vite.js','Redux'],
+        'link':'https://velvety-monstera-4607d4.netlify.app'
+    },
+    {
         'title':'GoodBooks',
         'img':'./imgs/goodbooks.webp',
         'description':'A user-friendly web app for managing your reading: Browse available books, curate your reading list, and seamlessly sync your selections across devices without backend dependencies.',
@@ -23,22 +39,7 @@ export const projects = [
         'technoligies':['HTML','React','Taildwind','Vite.js'],
         'link':'https://clever-sable-45175b.netlify.app'
     },
-    {
-        'title':'Pokedex',
-        'img':'./imgs/pokemon.webp',
-        'description':' Displays all Pokémon with infinite scrolling. Search Pokémon by name and like your favorites, accessing detailed information on click.',
-        'github':'https://github.com/Leslie-L/Pokedex',
-        'technoligies':['HTML','React','Taildwind','Vite.js','Redux'],
-        'link':'https://velvety-monstera-4607d4.netlify.app'
-    },
-    {
-        'title':'FakeShop',
-        'img':'./imgs/fakeshop.webp',
-        'description':'Simulate online browsing and purchasing with a virtual store. Manage your cart, view order summaries, history, and explore product details.',
-        'github':'https://github.com/Leslie-L/E-commerceV1/tree/main/E-CommerceV1',
-        'technoligies':['HTML','React','Taildwind','Vite.js'],
-        'link':'https://classy-llama-096c90.netlify.app/'
-    },
+    
     {
         'title':'Rick And Morty Wiki',
         'img':'./imgs/rickandmorty.webp',
