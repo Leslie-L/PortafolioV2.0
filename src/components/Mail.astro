@@ -1,0 +1,64 @@
+---
+import SendMail from "../functions/sendMail";
+interface Content{
+    name: string;
+    subject:string;
+    email:string;
+    message:string;
+}
+let showModal = false;
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+      const info:Content = {
+        name: data.get('name'),
+        subject:data.get('subject'),
+        email:data.get('mail'),
+        message:data.get('message'),
+      }
+     SendMail(info);
+     showModal=true;
+     
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
+<form method="POST" class="w-72 p-4 text-principalCard font-bold bg-proyectCard rounded-md flex flex-col">
+    
+    {
+        showModal &&
+        <div class="relative flex top-[-50px] ml-5 z-10 p-2 h-7 w-52  justify-center items-center text-lg text-white bg-green-600 rounded-sm">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd"/>
+            </svg>
+            <span class="mx-2" aria-label="meesaged sent">Messaged sent</span>
+        </div>
+    }
+      
+    <label for="name">Name</label>
+    <input type="text" class="h-8 bg-principalCard text-white rounded-sm focus:outline-none focus:ring focus:ring-white " id="name" name="name" required>
+
+    <label for="subject">Subject</label>
+    <input type="text" class="h-8 bg-principalCard text-white rounded-sm focus:outline-none focus:ring focus:ring-white"  id="subject" name="subject" required>
+    
+    <label for="mail">Email</label>
+    <input type="email" class="h-8 bg-principalCard text-white rounded-sm focus:outline-none focus:ring focus:ring-white" id="mail" name="mail" required>
+
+    <label for="message">Message</label>
+    <textarea name="message" class=" bg-principalCard text-white rounded-sm focus:outline-none focus:ring focus:ring-white" rows="6"  id="message" required></textarea>
+    
+    <button type="submit" class="w-full h-9 my-4 text-lg tracking-widest rounded-md bg-principalCard text-white hover:bg-white hover:text-principalCard hover:border-2 hover:border-principalCard focus:outline-none focus:ring focus:ring-white">
+        Send
+    </button>
+</form>
+
+<style>
+   
+    button{
+		font-family:'Bebas Neue',system-ui, sans-serif ;
+	}
+</style>
