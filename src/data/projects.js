@@ -32,6 +32,15 @@ export const projects = [
         'link':'https://adorable-piroshki-cc3799.netlify.app/'
     },
     {
+        'title':'Markdown Editor',
+        'img':'./imgs/markdown.webp',
+        'description':'A real-time Markdown editor built with Vite, allowing users to edit and preview Markdown content, with the ability to download Markdown files.',
+        'github':'https://github.com/Leslie-L/MarkdownEditor',
+        'technoligies':['HTML','CSS','TypeScript', 'Vite.js'],
+        'link':'https://markdownwebeditor.netlify.app/'
+    },
+    
+    {
         'title':'TIC TAC TOE',
         'img':'./imgs/tictactoe.webp',
         'description':'Tic Tac Toe game. With a responsive design and interactive elements with single or multiplayer game modes.',
